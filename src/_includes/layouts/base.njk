@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if title %}{{ title }} | {% endif %}{{ site.shortName }}</title>
+  <meta name="description" content="{{ description or site.description }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <meta property="og:title" content="{% if title %}{{ title }} | {% endif %}{{ site.shortName }}">
+  <meta property="og:description" content="{{ description or site.description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  {% block head %}{% endblock %}
+</head>
+<body class="{% if homePage %}home{% endif %}">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="utility"><div class="shell">Serving Knights of Columbus Councils in Districts 94–99</div></div>
+    <div class="nav-shell shell">
+      <a class="brand" href="/" aria-label="Southern California Chapter home">
+        <img src="/assets/img/chapter-logo.png" alt="Knights of Columbus Southern California Chapter">
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span><span class="sr-only">Menu</span></button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
+        {% for item in site.navigation %}<a href="{{ item.url }}"{% if page.url.startsWith(item.url) %} aria-current="page"{% endif %}>{{ item.label }}</a>{% endfor %}
+        <a class="nav-join" href="/join/">Join Us</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">{{ content | safe }}</main>
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div><img class="footer-mark" src="/assets/img/chapter-logo.png" alt=""><p>Faith in action across Southern California.</p></div>
+      <div><h2>Explore</h2><a href="/leadership/">Leadership</a><a href="/councils/">Councils</a><a href="/programs/">Programs</a><a href="/events/">Events</a></div>
+      <div><h2>Connect</h2><a href="/contact/">Contact</a><a href="/join/">Join Us</a><a href="/privacy/">Privacy</a><a href="https://www.californiaknights.org/" target="_blank" rel="noopener">California State Council</a></div>
+    </div>
+    <div class="shell footer-bottom"><span>© {{ '' | year }} Southern California Chapter</span><span>Knights of Columbus</span></div>
+  </footer>
+  <script src="/assets/js/site.js" defer></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

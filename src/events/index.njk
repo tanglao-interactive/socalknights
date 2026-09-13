@@ -1,0 +1,9 @@
+---
+layout: layouts/page.njk
+title: Events
+eyebrow: Chapter calendar
+intro: Gatherings, programs, deadlines, and service opportunities from across the Chapter.
+permalink: /events/
+---
+{% if collections.upcomingEvents.length %}<section><h2>Upcoming events</h2>{% for event in collections.upcomingEvents %}<article class="card"><p>{{ event.data.date | eventDate }}</p><h2><a href="{{ event.url }}">{{ event.data.title }}</a></h2>{{ event.templateContent | safe }}</article>{% endfor %}</section>{% else %}<div class="empty-state"><h2>No upcoming events have been posted.</h2><p>Chapter events and important dates will appear here as soon as they are confirmed.</p></div>{% endif %}
+{% if collections.pastEvents.length %}<section><h2>Past events</h2>{% for event in collections.pastEvents %}<p><a href="{{ event.url }}">{{ event.data.title }}</a> — {{ event.data.date | eventDate }}</p>{% endfor %}</section>{% endif %}

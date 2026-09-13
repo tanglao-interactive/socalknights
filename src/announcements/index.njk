@@ -1,0 +1,8 @@
+---
+layout: layouts/page.njk
+title: Announcements
+eyebrow: Chapter news
+intro: Timely notices, deadlines, and updates for councils and members.
+permalink: /announcements/
+---
+{% if announcements.length %}<div class="card-grid">{% for item in announcements %}<article class="card"><p>{{ item.date }}</p><h2>{{ item.title }}</h2><p>{{ item.summary }}</p></article>{% endfor %}</div>{% else %}<div class="empty-state"><h2>No announcements have been posted.</h2><p>Confirmed Chapter notices and updates will appear here.</p></div>{% endif %}

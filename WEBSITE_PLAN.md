@@ -2,7 +2,7 @@
 
 ## Purpose of this document
 
-This document proposes the content, page structure, visual direction, and delivery plan for `socalknights.com`, the website of the Knights of Columbus Southern California Chapter. It is based on the supplied Word document, the supplied images, and a review of the local `stgenknights` project.
+This document proposes the content, page structure, visual direction, and delivery plan for `socalknights.org`, the website of the Knights of Columbus Southern California Chapter. It is based on the supplied Word document, the supplied images, and a review of the local `stgenknights` project.
 
 The recommended approach is to reuse the proven technical patterns from the St. Genevieve website while creating a distinct chapter-level identity and a simpler experience for members, council leaders, prospective Knights, and the public.
 
@@ -500,11 +500,13 @@ Recommended implementation:
 - Reusable templates for navigation, footer, leadership lists, event cards, announcements, gallery albums, and forms
 - Image optimization to WebP or AVIF with JPEG fallback where needed
 - Automated build and deployment from the Git repository
-- `socalknights.com` and `www.socalknights.com` configured with one canonical version
+- `socalknights.org` and `www.socalknights.org` configured with the apex domain as canonical
 - HTTPS, redirects, sitemap, robots file, social metadata, and a custom 404 page
 - A documented update workflow that does not require copying HTML between pages
 
-The hosting provider can be chosen during implementation. Domain ownership is already complete, but DNS should not be changed until a tested preview is approved.
+The site will be hosted with GitHub Pages and deployed from the `main` branch by GitHub Actions. The public Route 53 hosted zone `Z00427231ZMT7IMUWP8DL` will provide DNS for `socalknights.org`; DNS should not be changed until the production build and preview are approved.
+
+The Councils page will use Leaflet with OpenStreetMap tiles and a local JSON dataset. It will show one approximate marker per council, allow filtering by Districts 94 through 99, and provide Google Maps navigation links. No database or Google Maps API key is required.
 
 ## Accessibility privacy and maintenance
 

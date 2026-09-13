@@ -1,0 +1,15 @@
+{
+  "name": "Knights of Columbus Southern California Chapter",
+  "shortName": "Southern California Chapter",
+  "url": "https://socalknights.org",
+  "description": "The Southern California Chapter brings together Knights of Columbus councils in Districts 94 through 99 to advance faith, fraternity, charitable service, and community programs.",
+  "navigation": [
+    { "label": "About", "url": "/about/" },
+    { "label": "Leadership", "url": "/leadership/" },
+    { "label": "Councils", "url": "/councils/" },
+    { "label": "Programs", "url": "/programs/" },
+    { "label": "Events", "url": "/events/" },
+    { "label": "News", "url": "/announcements/" },
+    { "label": "Resources", "url": "/resources/" }
+  ]
+}

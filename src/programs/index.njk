@@ -1,0 +1,9 @@
+---
+layout: layouts/page.njk
+title: Chapter Programs
+eyebrow: Faith in action
+intro: Programs connect councils with practical ways to serve the Church, families, and communities.
+permalink: /programs/
+---
+<div class="program-list">{% for group in leadership.groups %}{% if group.name != "Primary Chairmen" %}<section class="program-panel" id="{{ group.name | slugify }}"><p class="eyebrow">Program area</p><h2>{{ group.name }}</h2><ul>{% for item in group.members %}<li><strong>{{ item.role }}</strong><br>{{ item.name }}</li>{% endfor %}</ul></section>{% endif %}{% endfor %}</div>
+<section><div class="notice"><h2>Council support and development</h2><p>Chapter leaders also support ceremonials, membership, training, new council development, fraternal benefit events, Safe Environment, Cor, forms, and Hispanic development.</p><a href="/leadership/#primary-chairmen">Find a program chairman →</a></div></section>

@@ -1,0 +1,6 @@
+[
+  { "name": "Faith", "description": "Support vocations, Catholic formation, sacred icons, the Father McGivney Guild, and the McGivney Relic program.", "href": "#faith" },
+  { "name": "Community", "description": "Serve neighbors through youth competitions, wheelchairs, coats, food assistance, and safety initiatives.", "href": "#community" },
+  { "name": "Life", "description": "Uphold human dignity through ultrasound support, Special Olympics, Silver Rose, and disability programs.", "href": "#life" },
+  { "name": "Chapter Initiatives", "description": "Strengthen councils through formation, membership, ceremonials, development, benefits, and shared resources.", "href": "#other-initiatives" }
+]

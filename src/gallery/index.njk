@@ -1,0 +1,8 @@
+---
+layout: layouts/page.njk
+title: Photo Gallery
+eyebrow: Life of the Chapter
+intro: Photos from faith, fraternity, and service throughout the Southern California Chapter.
+permalink: /gallery/
+---
+{% if gallery.length %}<div class="card-grid">{% for album in gallery %}<article class="card"><h2>{{ album.title }}</h2><p>{{ album.description }}</p></article>{% endfor %}</div>{% else %}<div class="empty-state"><h2>Our first albums are being prepared.</h2><p>Event photos will be published after captions and permissions are confirmed.</p></div>{% endif %}

@@ -1,0 +1,77 @@
+{
+  "officers": [
+    { "role": "President", "name": "Felimon N. Camana" },
+    { "role": "Chaplain", "name": "Rev. Joy Lawrence Santos" },
+    { "role": "Vice President", "name": "Raymond Mangahas" },
+    { "role": "Secretary", "name": "Thomas Bray" },
+    { "role": "Treasurer", "name": "Walter Gonzalez" },
+    { "role": "Advocate", "name": "Jim Carcich" },
+    { "role": "Marshal", "name": "Geoffrey Plourde" },
+    { "role": "Assistant Marshal", "name": "William Upshaw" },
+    { "role": "Three Year Trustee", "name": "Danilo Eslava" },
+    { "role": "Two Year Trustee", "name": "Jose Estevez" },
+    { "role": "One Year Trustee", "name": "Iñigo Felimon Engo" },
+    { "role": "Immediate Past Chapter President", "name": "Danilo Eslava" },
+    { "role": "Adviser", "name": "James Larson" },
+    { "role": "State Deputy", "name": "Vladimir Rivera" }
+  ],
+  "groups": [
+    {
+      "name": "Primary Chairmen",
+      "members": [
+        { "role": "District Deputy Mentor", "name": "Iñigo Felimon “Epi” Engo" },
+        { "role": "Program Chairman", "name": "Raymond Mangahas" },
+        { "role": "CUF and Ceremonials Chairman", "name": "Thomas Bray" },
+        { "role": "Membership Chairman", "name": "Thomas Bray" },
+        { "role": "Training Chairman", "name": "Iñigo Felimon “Epi” Engo" },
+        { "role": "New Council and Round Table Development", "name": "Iñigo Felimon “Epi” Engo" },
+        { "role": "History Book Coordinator", "name": "Dr. Raymond Warriner" },
+        { "role": "Fraternal Benefit Events Chairman", "name": "Raymond Mangahas" },
+        { "role": "Star Tracker and Star Council Chairman", "name": "Ceferino Guinto Jr." },
+        { "role": "Safe Environment Chairman", "name": "Raymond Mangahas" },
+        { "role": "Cor Coordinator", "name": "William Upshaw" },
+        { "role": "Forms Chairman", "name": "Chester Paul Sgroi" },
+        { "role": "Hispanic Development Chairman", "name": "Jose Estevez" }
+      ]
+    },
+    {
+      "name": "Faith",
+      "members": [
+        { "role": "Vocations", "name": "Nicolas Villicich" },
+        { "role": "Icon Coordinator", "name": "Jaime Diaz" },
+        { "role": "McGivney Relic", "name": "Jose Estevez" }
+      ]
+    },
+    {
+      "name": "Community",
+      "members": [
+        { "role": "Basketball Free Throw", "name": "Thomas Knapp" },
+        { "role": "Essay and Poster Contest", "name": "Gerry Torres" },
+        { "role": "Wheelchair Program", "name": "Robert Rubio" },
+        { "role": "Soccer Challenge", "name": "Walter Gonzalez" },
+        { "role": "Coats for Kids", "name": "Walter Gonzalez" },
+        { "role": "Saint Joseph’s Table and Food for Families", "name": "Jose Estevez" },
+        { "role": "AED Chairman", "name": "William Upshaw" }
+      ]
+    },
+    {
+      "name": "Life",
+      "members": [
+        { "role": "Ultrasound", "name": "Jose Peña" },
+        { "role": "Campaign Supporting People with Intellectual Disabilities", "name": "Dr. Raymond Warriner" },
+        { "role": "Special Olympics", "name": "PSD James Larson" },
+        { "role": "Silver Rose", "name": "Jose Estevez" }
+      ]
+    },
+    {
+      "name": "Other Initiatives",
+      "members": [
+        { "role": "Chapter Website and Social Media", "name": "Thomas Bray" },
+        { "role": "Father McGivney Guild", "name": "Jaime Diaz" },
+        { "role": "Campesinos", "name": "Jose Estevez" },
+        { "role": "Disaster Relief and First Responders", "name": "Jose Estevez" },
+        { "role": "Scholarship Chairman", "name": "Robert Rubio" }
+      ]
+    }
+  ]
+}
