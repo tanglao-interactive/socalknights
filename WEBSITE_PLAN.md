@@ -36,6 +36,70 @@ For chapter leadership, the website should also be easy to update without editin
 - Community partners and charitable organizations
 - Members of the public who encounter a chapter program or event
 
+## Confirmed organization and scope
+
+### Chapter and council terminology
+
+A **council** is the local Knights of Columbus body to which individual members belong. A **chapter** brings together representatives from multiple neighboring councils to address the well-being and promotion of the Order in their locality. The California State Council is the statewide jurisdiction; the Southern California Chapter is one of the chapters within that jurisdiction.
+
+The official name supported by the supplied logo and California State Council records is **Knights of Columbus Southern California Chapter**. The shorter name **Southern California Chapter** may be used in headings and repeated references.
+
+This distinction is defined in Section 242 of the Knights of Columbus Charter, Constitution and Laws. It describes a chapter as an organization of three or more neighboring councils whose designated councils choose to participate and send elected representatives.
+
+### Recommended chapter description
+
+Use the following as provisional website copy pending leadership approval:
+
+> The Knights of Columbus Southern California Chapter brings together member councils in Districts 94 through 99 of the California State Council. The Chapter supports cooperation among councils, strengthens the mission and objectives of the Knights of Columbus in the local area, and advances Catholic faith, fraternity, charitable service, and community programs.
+
+Saying only that the Chapter is “part of the California Knights of Columbus” is accurate but does not tell visitors what the Chapter does. The description above adds the Chapter's purpose using the official definition while remaining concise.
+
+### Councils currently assigned to the Chapter
+
+The California State Council's **District Structure 2026–2027**, updated August 11, 2026, assigns Districts 94 through 99 and the following 24 councils to the Southern California Chapter:
+
+| District | Council | Location |
+| --- | ---: | --- |
+| 94 | 3601 | Canoga Park |
+| 94 | 4956 | Sherman Oaks |
+| 94 | 17376 | Woodland Hills |
+| 94 | 17951 | Encino |
+| 95 | 2382 | Van Nuys |
+| 95 | 3148 | Van Nuys |
+| 95 | 14772 | Panorama City |
+| 95 | 16687 | North Hollywood |
+| 95 | 17933 | Lake Balboa |
+| 96 | 5007 | North Hills |
+| 96 | 16584 | Reseda |
+| 96 | 18774 | Reseda Spanish |
+| 97 | 1920 | Glendale |
+| 97 | 3254 | Montrose |
+| 97 | 3472 | Burbank |
+| 97 | 4438 | Sunland |
+| 97 | 17904 | Glendale |
+| 98 | 2406 | Los Angeles |
+| 98 | 11939 | Los Angeles |
+| 98 | 13555 | Los Angeles |
+| 98 | 14783 | Los Angeles |
+| 99 | 7759 | Los Angeles |
+| 99 | 13237 | Los Angeles |
+| 99 | 16120 | Los Angeles |
+
+This official district roster is a better source than searching every Southern California ZIP code. The council finder returns nearby councils geographically, including councils belonging to other chapters, while the state roster explicitly identifies Chapter membership. The roster should be checked at the start of each Columbian year before the website is updated.
+
+Source references:
+
+- [Knights of Columbus Charter Constitution and Laws 2025](https://files.kofc.org/download/assets/Charter%2BConstitution%2BLaws%2B2025/fb91ee58f7be11f09f41965f5e1b9ba4)
+- [California State Council Chapters](https://www.californiaknights.org/chapters/)
+- [California State Council District Deputies 2026–2027](https://www.californiaknights.org/district-deputies-2026-2027/)
+- [California District Structure 2026–2027](https://www.californiaknights.org/wp-content/uploads/2026/08/Web-District-Deputies-08.11.26.pdf)
+
+### Status of the supplied leadership roster
+
+The Word document supplies names for all Chapter Officer positions and most director and chairman positions. It does not explicitly label the roster with a Columbian year. The Saint Augustine graphic embedded in the document says **2026–2027**, and the names overlap with the current 2026–2027 California district roster, but this is not enough to prove that every supplied Chapter officer assignment is for that year.
+
+For the MVP, the roster can be entered into structured data with a visible label of **Year pending confirmation** in the editing notes. The public page should not claim **2026–2027** until Chapter leadership confirms it.
+
 ## Recommended site map
 
 The main navigation should stay compact. Related information can be grouped beneath dropdown menus on larger screens and expandable sections on mobile.
@@ -323,11 +387,26 @@ The supplied chapter logo is wide and works well in a desktop header. A simplifi
 
 ## Content and asset checklist
 
+### Current answer status
+
+| Item | Status | Current decision or source |
+| --- | --- | --- |
+| Official name | Supported by official records | Knights of Columbus Southern California Chapter; leadership approval requested |
+| Chapter description | Provisional copy prepared | Needs leadership approval |
+| Area and councils served | Confirmed for 2026–2027 | Districts 94–99 and 24 councils in the current California State Council roster |
+| Leadership roster | Supplied | Names and titles are in the Word document; roster year still needs confirmation |
+| Directors and chairmen | Supplied with gaps | Named assignments are in the Word document; blank positions need a Vacant-or-hide decision |
+| General email | Not available | The MVP can link to the Contact page without displaying an email until a contact method is chosen |
+| Mailing or meeting address | Not supplied | Optional for the MVP unless meetings are advertised |
+| Meeting schedule | Not supplied | Optional for the MVP unless meetings are public |
+| Upcoming events | Not supplied | Use an honest empty state until an event is provided |
+| Forms | Not supplied | Link to official state and Supreme forms initially, or hide Chapter Forms until files are supplied |
+| Social media | Not supplied | Omit icons and links until official accounts are confirmed |
+| Image permission | Not confirmed | Do not publish the Saint Augustine graphic or HEIC images yet |
+
 ### Required before the first public release
 
-- Approved one or two paragraph chapter description
-- Official chapter name and preferred capitalization
-- Geographic area or dioceses served
+- Leadership approval of the provisional chapter description
 - Current Columbian year for the leadership roster
 - Confirmation of every officer and chairman name, spelling, title, and vacancy
 - Past Chapter Presidents list, including years served
@@ -356,18 +435,17 @@ The supplied chapter logo is wide and works well in a desktop header. A simplifi
 
 The chapter should answer these questions before design and development are finalized:
 
-1. Is the formal public name **Knights of Columbus Southern California Chapter**, or is another form required?
-2. Which counties, dioceses, districts, or councils does the chapter serve?
-3. What is the current Columbian year for the supplied roster?
-4. Are chapter meeting details public?
-5. Should personal names be accompanied by email addresses or phone numbers, or should all contact use role-based addresses?
-6. Are all leadership vacancies meant to appear as **Vacant**, or should unfilled roles be hidden?
-7. Who may publish events, announcements, photos, and forms?
-8. Should past events, announcements, and leadership rosters remain publicly searchable?
-9. Does the chapter want a public list or map of participating councils?
-10. Are Spanish-language pages or translated key information needed?
-11. Is a newsletter archive planned, or are announcements sufficient?
-12. May the Saint Augustine 2026–2027 image and both supplied HEIC images be published online?
+1. Does Chapter leadership approve the formal public name **Knights of Columbus Southern California Chapter** and the provisional description in this document?
+2. What is the current Columbian year for the supplied roster?
+3. Are chapter meeting details public?
+4. Should personal names be accompanied by email addresses or phone numbers, or should all contact use role-based addresses?
+5. Are all leadership vacancies meant to appear as **Vacant**, or should unfilled roles be hidden?
+6. Who may publish events, announcements, photos, and forms?
+7. Should past events, announcements, and leadership rosters remain publicly searchable?
+8. Should the confirmed council list appear as a directory, a map, or both?
+9. Are Spanish-language pages or translated key information needed?
+10. Is a newsletter archive planned, or are announcements sufficient?
+11. May the Saint Augustine 2026–2027 image and both supplied HEIC images be published online?
 
 ## Recommended first release
 
