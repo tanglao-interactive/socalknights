@@ -4,8 +4,8 @@ title: Councils and Districts
 eyebrow: Districts 94–99
 intro: Explore the 24 councils currently assigned to the Southern California Chapter.
 permalink: /councils/
+councilMap: true
 ---
-{% block head %}<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIINfQ3ynhHdqZtAI4lv7cV9bXmCe1OBY=" crossorigin="">{% endblock %}
 <p>Use the district filters to focus the map and directory. Map markers show the approximate city or ZIP location published by the official council finder, not a verified meeting address.</p>
 <div class="filter-bar" role="group" aria-label="Filter councils by district"><button class="filter" data-district-filter="all" aria-pressed="true">All districts</button>{% for district in [94,95,96,97,98,99] %}<button class="filter" data-district-filter="{{ district }}" aria-pressed="false">District {{ district }}</button>{% endfor %}</div>
 <div class="map-layout">
@@ -13,4 +13,3 @@ permalink: /councils/
   <div class="council-list" aria-live="polite">{% for council in councils %}<article class="council-card" data-council-card data-district="{{ council.district }}"><p>District {{ council.district }}</p><h2>Council {{ council.councilNumber }}</h2><strong>{{ council.name }}</strong><p>{{ council.city }}, California</p><a href="{{ council.mapsUrl }}" target="_blank" rel="noopener">Navigate with Google Maps →</a></article>{% endfor %}</div>
 </div>
 <script id="council-data" type="application/json">{{ councils | dump | safe }}</script>
-{% block scripts %}<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script><script src="/assets/js/councils-map.js"></script>{% endblock %}

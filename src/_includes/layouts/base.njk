@@ -15,6 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/site.css">
+  {% if councilMap %}<link rel="stylesheet" href="/assets/vendor/leaflet/leaflet.css">{% endif %}
   {% block head %}{% endblock %}
 </head>
 <body class="{% if homePage %}home{% endif %}">
@@ -42,6 +43,7 @@
     <div class="shell footer-bottom"><span>© {{ '' | year }} Southern California Chapter</span><span>Knights of Columbus · Website maintained by <a href="https://www.tanglao.org/" target="_blank" rel="noopener">Tanglao, Corp</a></span></div>
   </footer>
   <script src="/assets/js/site.js" defer></script>
+  {% if councilMap %}<script src="/assets/vendor/leaflet/leaflet.js"></script><script src="/assets/js/councils-map.js"></script>{% endif %}
   {% block scripts %}{% endblock %}
 </body>
 </html>
