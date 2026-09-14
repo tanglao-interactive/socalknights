@@ -2,6 +2,7 @@
   "name": "Knights of Columbus Southern California Chapter",
   "shortName": "Southern California Chapter",
   "url": "https://socalknights.org",
+  "googleAnalyticsId": "G-LW06KZ4RMM",
   "description": "The Southern California Chapter serves Knights of Columbus councils across the Greater Los Angeles area covered by the Archdiocese of Los Angeles.",
   "navigation": [
     { "label": "About", "url": "/about/" },

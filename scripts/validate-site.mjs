@@ -37,4 +37,9 @@ for (const requiredEventText of ["District Deputy Mid-Term Meeting", "January 8â
 }
 if (!fs.existsSync(path.join(root, "_site/assets/img/events/district-deputy-mid-term-meeting-2027.webp"))) throw new Error("Event flyer was not copied to the build");
 
+const homePage = fs.readFileSync(path.join(root, "_site/index.html"), "utf8");
+for (const analyticsText of ["https://www.googletagmanager.com/gtag/js?id=G-LW06KZ4RMM", "gtag('config', 'G-LW06KZ4RMM')"]) {
+  if (!homePage.includes(analyticsText)) throw new Error(`Google Analytics integration is missing: ${analyticsText}`);
+}
+
 console.log("Validated 21 districts, 74 unique listed councils, privacy rules, and all required build outputs.");
