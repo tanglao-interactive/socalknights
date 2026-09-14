@@ -3,6 +3,7 @@ layout: layouts/page.njk
 title: Chapter Leadership
 eyebrow: Leadership
 intro: Chapter officers, directors, and chairmen serving during Columbian Year 2026–2027.
+headerTheme: leadership
 permalink: /leadership/
 ---
 <section><p class="eyebrow">Columbian Year 2026–2027</p><h2>Chapter Officers</h2><dl class="directory">{% for person in leadership.officers %}<div class="person"><dt>{{ person.role }}</dt><dd>{{ person.name }}</dd></div>{% endfor %}</dl></section>

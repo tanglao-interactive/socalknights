@@ -3,6 +3,7 @@ layout: layouts/page.njk
 title: Chapter Programs
 eyebrow: Faith in action
 intro: Programs connect councils with practical ways to serve the Church, families, and communities.
+headerTheme: programs
 permalink: /programs/
 ---
 <div class="program-list">{% for group in leadership.groups %}{% if group.name != "Primary Chairmen" %}<section class="program-panel" id="{{ group.name | slugify }}"><p class="eyebrow">Program area</p><h2>{{ group.name }}</h2><ul>{% for item in group.members %}<li><strong>{{ item.role }}</strong><br>{{ item.name }}</li>{% endfor %}</ul></section>{% endif %}{% endfor %}</div>
