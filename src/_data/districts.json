@@ -1,0 +1,903 @@
+[
+  {
+    "number": 94,
+    "deputy": "Chester Paul Sgroi",
+    "councils": [
+      {
+        "councilNumber": 3601,
+        "name": "Monsignor John J. Hurley",
+        "city": "Canoga Park",
+        "zipCode": "91301",
+        "latitude": 34.1227,
+        "longitude": -118.7573,
+        "locationVerified": true,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Existing verified MVP dataset"
+      },
+      {
+        "councilNumber": 4956,
+        "name": "Father James O. Mahony",
+        "city": "Sherman Oaks",
+        "zipCode": "91423",
+        "latitude": 34.1526,
+        "longitude": -118.4322,
+        "locationVerified": true,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Existing verified MVP dataset"
+      },
+      {
+        "councilNumber": 17376,
+        "name": "St. Mel",
+        "city": "Woodland Hills",
+        "zipCode": "91367",
+        "latitude": 34.1767,
+        "longitude": -118.6159,
+        "locationVerified": true,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Existing verified MVP dataset"
+      },
+      {
+        "councilNumber": 17951,
+        "name": "Cor Mariae",
+        "city": "Encino",
+        "zipCode": "91316",
+        "latitude": 34.1655,
+        "longitude": -118.5175,
+        "locationVerified": true,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Existing verified MVP dataset"
+      }
+    ]
+  },
+  {
+    "number": 95,
+    "deputy": "Felimon Camana",
+    "councils": [
+      {
+        "councilNumber": 2382,
+        "name": "St. Elisabeth of Hungary",
+        "city": "Van Nuys",
+        "zipCode": "91405",
+        "latitude": 34.2001,
+        "longitude": -118.4456,
+        "locationVerified": true,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Existing verified MVP dataset"
+      },
+      {
+        "councilNumber": 14772,
+        "name": "St. Genevieve",
+        "city": "Panorama City",
+        "zipCode": "91605",
+        "latitude": 34.2057,
+        "longitude": -118.4001,
+        "locationVerified": true,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Existing verified MVP dataset"
+      },
+      {
+        "councilNumber": 16687,
+        "name": "St. Jane Frances de Chantal",
+        "city": "North Hollywood",
+        "zipCode": "91345",
+        "latitude": 34.2619,
+        "longitude": -118.4587,
+        "locationVerified": true,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Existing verified MVP dataset"
+      },
+      {
+        "councilNumber": 17933,
+        "name": "St. Bridget of Sweden Church",
+        "city": "Lake Balboa",
+        "zipCode": "91325",
+        "latitude": 34.2353,
+        "longitude": -118.5188,
+        "locationVerified": true,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Existing verified MVP dataset"
+      },
+      {
+        "councilNumber": 3148,
+        "name": "Van Nuys",
+        "city": "Van Nuys",
+        "zipCode": "91405",
+        "latitude": 34.2001,
+        "longitude": -118.4456,
+        "locationVerified": true,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Existing verified MVP dataset"
+      }
+    ]
+  },
+  {
+    "number": 96,
+    "deputy": "Jose Estevez",
+    "councils": [
+      {
+        "councilNumber": 5007,
+        "name": "Father Leheny",
+        "city": "Sepulveda",
+        "zipCode": "91343",
+        "latitude": 34.2366,
+        "longitude": -118.4758,
+        "locationVerified": true,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Existing verified MVP dataset"
+      },
+      {
+        "councilNumber": 16584,
+        "name": "Father Michael J. McGivney",
+        "city": "Reseda",
+        "zipCode": "91335",
+        "latitude": 34.2007,
+        "longitude": -118.5391,
+        "locationVerified": true,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Existing verified MVP dataset"
+      },
+      {
+        "councilNumber": 18774,
+        "name": "Santa Catalina de Siena",
+        "city": "Reseda",
+        "zipCode": "91411",
+        "latitude": 34.1781,
+        "longitude": -118.4574,
+        "locationVerified": true,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Existing verified MVP dataset"
+      }
+    ]
+  },
+  {
+    "number": 97,
+    "deputy": "Oscar Talosig",
+    "councils": [
+      {
+        "councilNumber": 1920,
+        "name": "Glendale",
+        "city": "Glendale",
+        "zipCode": "90041",
+        "latitude": 34.1339,
+        "longitude": -118.2082,
+        "locationVerified": true,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Existing verified MVP dataset"
+      },
+      {
+        "councilNumber": 3254,
+        "name": "Crescenta Valley",
+        "city": "Montrose",
+        "zipCode": "91020",
+        "latitude": 34.2114,
+        "longitude": -118.2305,
+        "locationVerified": true,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Existing verified MVP dataset"
+      },
+      {
+        "councilNumber": 3472,
+        "name": "St. Cabrini",
+        "city": "Burbank",
+        "zipCode": "91502",
+        "latitude": 34.1745,
+        "longitude": -118.3059,
+        "locationVerified": true,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Existing verified MVP dataset"
+      },
+      {
+        "councilNumber": 4438,
+        "name": "Our Lady of Lourdes",
+        "city": "Tujunga",
+        "zipCode": "91042",
+        "latitude": 34.2544,
+        "longitude": -118.2849,
+        "locationVerified": true,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Existing verified MVP dataset"
+      },
+      {
+        "councilNumber": 17904,
+        "name": "Incarnation",
+        "city": "Glendale",
+        "zipCode": "91331",
+        "latitude": 34.2556,
+        "longitude": -118.4208,
+        "locationVerified": true,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Existing verified MVP dataset"
+      }
+    ]
+  },
+  {
+    "number": 98,
+    "deputy": "Francisco Tabafunda",
+    "councils": [
+      {
+        "councilNumber": 2406,
+        "name": "Hollywood",
+        "city": "Los Angeles",
+        "zipCode": "90004",
+        "latitude": 34.0762,
+        "longitude": -118.3029,
+        "locationVerified": true,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Existing verified MVP dataset"
+      },
+      {
+        "councilNumber": 11939,
+        "name": "Los Angeles",
+        "city": "Los Angeles",
+        "zipCode": "90007",
+        "latitude": 34.0294,
+        "longitude": -118.2871,
+        "locationVerified": true,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Existing verified MVP dataset"
+      },
+      {
+        "councilNumber": 13555,
+        "name": "Father William J. Brelsford",
+        "city": "Los Angeles",
+        "zipCode": "90064",
+        "latitude": 34.0353,
+        "longitude": -118.4259,
+        "locationVerified": true,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Existing verified MVP dataset"
+      },
+      {
+        "councilNumber": 14783,
+        "name": "Blessed Sacrament",
+        "city": "Los Angeles",
+        "zipCode": "90029",
+        "latitude": 34.09,
+        "longitude": -118.2944,
+        "locationVerified": true,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Existing verified MVP dataset"
+      }
+    ]
+  },
+  {
+    "number": 99,
+    "deputy": "Erasmo M. Lascano",
+    "councils": [
+      {
+        "councilNumber": 7759,
+        "name": "Queen of Angeles",
+        "city": "Los Angeles",
+        "zipCode": "90026",
+        "latitude": 34.0766,
+        "longitude": -118.2646,
+        "locationVerified": true,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Existing verified MVP dataset"
+      },
+      {
+        "councilNumber": 13237,
+        "name": "Immaculate Heart of Mary",
+        "city": "Los Angeles",
+        "zipCode": "90029",
+        "latitude": 34.09,
+        "longitude": -118.2944,
+        "locationVerified": true,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Existing verified MVP dataset"
+      },
+      {
+        "councilNumber": 16120,
+        "name": "Our Lady of Peñafrancia",
+        "city": "Los Angeles",
+        "zipCode": "90032",
+        "latitude": 34.0818,
+        "longitude": -118.1753,
+        "locationVerified": true,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Existing verified MVP dataset"
+      },
+      {
+        "councilNumber": 16256,
+        "name": "St. Teresa of Avila",
+        "city": "Los Angeles",
+        "zipCode": "90039",
+        "locationVerified": true,
+        "latitude": 34.1121,
+        "longitude": -118.2594,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Zippopotam.us US ZIP centroid"
+      }
+    ]
+  },
+  {
+    "number": 100,
+    "deputy": "German M. Torres Jr.",
+    "councils": [
+      {
+        "councilNumber": 920,
+        "name": "Santa Monica",
+        "city": "Santa Monica",
+        "zipCode": "90404",
+        "locationVerified": true,
+        "latitude": 34.0268,
+        "longitude": -118.4733,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Zippopotam.us US ZIP centroid"
+      },
+      {
+        "councilNumber": 3744,
+        "name": "Father Emil Kapaun",
+        "city": "Westchester",
+        "zipCode": "90293",
+        "locationVerified": false
+      },
+      {
+        "councilNumber": 4834,
+        "name": "Marina",
+        "city": "Venice",
+        "zipCode": "90294",
+        "locationVerified": false
+      },
+      {
+        "councilNumber": 14660,
+        "name": "St. Martin of Tours",
+        "city": "Los Angeles",
+        "zipCode": "90049",
+        "locationVerified": true,
+        "latitude": 34.066,
+        "longitude": -118.474,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Zippopotam.us US ZIP centroid"
+      }
+    ]
+  },
+  {
+    "number": 101,
+    "deputy": "Art Sanabria",
+    "councils": [
+      {
+        "councilNumber": 2550,
+        "name": "Henry T. Gage",
+        "city": "Los Angeles",
+        "zipCode": "90016",
+        "locationVerified": true,
+        "latitude": 34.0298,
+        "longitude": -118.3528,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Zippopotam.us US ZIP centroid"
+      },
+      {
+        "councilNumber": 18015,
+        "name": null,
+        "city": "Los Angeles",
+        "zipCode": null,
+        "locationVerified": false,
+        "officialRecordVerified": false
+      },
+      {
+        "councilNumber": 15515,
+        "name": "Our Mother of Good Counsel",
+        "city": "Los Angeles",
+        "zipCode": "90027",
+        "locationVerified": true,
+        "latitude": 34.104,
+        "longitude": -118.2925,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Zippopotam.us US ZIP centroid"
+      },
+      {
+        "councilNumber": 14945,
+        "name": "Bishop Alphonse Gallegos",
+        "city": "Los Angeles",
+        "zipCode": "90059",
+        "locationVerified": true,
+        "latitude": 33.9293,
+        "longitude": -118.2463,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Zippopotam.us US ZIP centroid"
+      }
+    ]
+  },
+  {
+    "number": 102,
+    "deputy": "Raymond F. Mangahas",
+    "councils": [
+      {
+        "councilNumber": 2996,
+        "name": "John Cardinal Glennon",
+        "city": "Lynwood",
+        "zipCode": "90262",
+        "locationVerified": true,
+        "latitude": 33.9241,
+        "longitude": -118.2013,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Zippopotam.us US ZIP centroid"
+      },
+      {
+        "councilNumber": 3052,
+        "name": "Mary Help of Christians",
+        "city": "Bellflower",
+        "zipCode": "90706",
+        "locationVerified": true,
+        "latitude": 33.8867,
+        "longitude": -118.1265,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Zippopotam.us US ZIP centroid"
+      },
+      {
+        "councilNumber": 3678,
+        "name": "Norwalk",
+        "city": "Norwalk",
+        "zipCode": "90650",
+        "locationVerified": true,
+        "latitude": 33.9056,
+        "longitude": -118.0818,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Zippopotam.us US ZIP centroid"
+      },
+      {
+        "councilNumber": 3697,
+        "name": "Knute Rockne",
+        "city": "Downey",
+        "zipCode": "90241",
+        "locationVerified": true,
+        "latitude": 33.9416,
+        "longitude": -118.1306,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Zippopotam.us US ZIP centroid"
+      },
+      {
+        "councilNumber": 6004,
+        "name": "John F. Kennedy",
+        "city": "Artesia",
+        "zipCode": "90701",
+        "locationVerified": true,
+        "latitude": 33.8654,
+        "longitude": -118.0731,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Zippopotam.us US ZIP centroid"
+      }
+    ]
+  },
+  {
+    "number": 103,
+    "deputy": "Chukwudi Akubuilo",
+    "councils": [
+      {
+        "councilNumber": 2989,
+        "name": "Fermin Lasuen",
+        "city": "Hawthorne",
+        "zipCode": "90504",
+        "locationVerified": false
+      },
+      {
+        "councilNumber": 4038,
+        "name": "Gardena Valley",
+        "city": "Gardena",
+        "zipCode": "90247",
+        "locationVerified": true,
+        "latitude": 33.8925,
+        "longitude": -118.2961,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Zippopotam.us US ZIP centroid"
+      },
+      {
+        "councilNumber": 15679,
+        "name": "Iwene Tansi",
+        "city": "Los Angeles",
+        "zipCode": "90303",
+        "locationVerified": false
+      }
+    ]
+  },
+  {
+    "number": 104,
+    "deputy": "Jose H. Pena",
+    "councils": [
+      {
+        "councilNumber": 1990,
+        "name": "Los Crusados",
+        "city": "Redondo Beach",
+        "zipCode": "90277",
+        "locationVerified": true,
+        "latitude": 33.8307,
+        "longitude": -118.3832,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Zippopotam.us US ZIP centroid"
+      },
+      {
+        "councilNumber": 4567,
+        "name": "Queen of Martyrs",
+        "city": "Manhattan Beach",
+        "zipCode": "90266",
+        "locationVerified": true,
+        "latitude": 33.8896,
+        "longitude": -118.3996,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Zippopotam.us US ZIP centroid"
+      },
+      {
+        "councilNumber": 4919,
+        "name": "Father George Lawlor",
+        "city": "Torrance",
+        "zipCode": "90501",
+        "locationVerified": true,
+        "latitude": 33.8268,
+        "longitude": -118.3118,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Zippopotam.us US ZIP centroid"
+      },
+      {
+        "councilNumber": 18124,
+        "name": "Los Cristeros",
+        "city": "Hermosa Beach",
+        "zipCode": "90501",
+        "locationVerified": false
+      }
+    ]
+  },
+  {
+    "number": 105,
+    "deputy": "Danilo “Dan” Danganan",
+    "councils": [
+      {
+        "councilNumber": 3699,
+        "name": "Pico Rivera",
+        "city": "Pico Rivera",
+        "zipCode": "90660",
+        "locationVerified": true,
+        "latitude": 33.9886,
+        "longitude": -118.0883,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Zippopotam.us US ZIP centroid"
+      },
+      {
+        "councilNumber": 3051,
+        "name": "St. Patrick’s",
+        "city": "Wilmington",
+        "zipCode": "90744",
+        "locationVerified": true,
+        "latitude": 33.7855,
+        "longitude": -118.2645,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Zippopotam.us US ZIP centroid"
+      },
+      {
+        "councilNumber": 5006,
+        "name": "St. Martin de Porres",
+        "city": "Compton",
+        "zipCode": "90220",
+        "locationVerified": true,
+        "latitude": 33.8748,
+        "longitude": -118.2402,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Zippopotam.us US ZIP centroid"
+      },
+      {
+        "councilNumber": 7864,
+        "name": "St. Margaret Mary",
+        "city": "Lomita",
+        "zipCode": "90717",
+        "locationVerified": true,
+        "latitude": 33.7938,
+        "longitude": -118.3172,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Zippopotam.us US ZIP centroid"
+      }
+    ]
+  },
+  {
+    "number": 106,
+    "deputy": "Ricardo Manalo",
+    "councils": [
+      {
+        "councilNumber": 3542,
+        "name": "Culver City",
+        "city": "Culver City",
+        "zipCode": "90232",
+        "locationVerified": true,
+        "latitude": 34.0168,
+        "longitude": -118.3973,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Zippopotam.us US ZIP centroid"
+      },
+      {
+        "councilNumber": 2327,
+        "name": "Father Kevin Morrissey",
+        "city": "Inglewood",
+        "zipCode": "90301",
+        "locationVerified": true,
+        "latitude": 33.955,
+        "longitude": -118.3556,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Zippopotam.us US ZIP centroid"
+      }
+    ]
+  },
+  {
+    "number": 107,
+    "deputy": "Patrick Murach",
+    "councils": [
+      {
+        "councilNumber": 987,
+        "name": "Long Beach",
+        "city": "Long Beach",
+        "zipCode": "90803",
+        "locationVerified": true,
+        "latitude": 33.7619,
+        "longitude": -118.1341,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Zippopotam.us US ZIP centroid"
+      },
+      {
+        "councilNumber": 10533,
+        "name": "Bishop Carl Fisher",
+        "city": "Long Beach",
+        "zipCode": "90802",
+        "locationVerified": true,
+        "latitude": 33.7706,
+        "longitude": -118.182,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Zippopotam.us US ZIP centroid"
+      },
+      {
+        "councilNumber": 18925,
+        "name": "Our Lady of Refuge",
+        "city": "Long Beach",
+        "zipCode": "90804",
+        "locationVerified": true,
+        "latitude": 33.7857,
+        "longitude": -118.1357,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Zippopotam.us US ZIP centroid"
+      }
+    ]
+  },
+  {
+    "number": 108,
+    "deputy": "Alfonso Perez",
+    "councils": [
+      {
+        "councilNumber": 14930,
+        "name": "Santa Rosa de Lima",
+        "city": "Maywood",
+        "zipCode": "90270",
+        "locationVerified": true,
+        "latitude": 33.989,
+        "longitude": -118.1877,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Zippopotam.us US ZIP centroid"
+      },
+      {
+        "councilNumber": 16526,
+        "name": "St. Thomas el Apostol",
+        "city": "Los Angeles",
+        "zipCode": "90007",
+        "locationVerified": true,
+        "latitude": 34.0294,
+        "longitude": -118.2871,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Zippopotam.us US ZIP centroid"
+      },
+      {
+        "councilNumber": 17038,
+        "name": "San Vicente de Paul",
+        "city": "Los Angeles",
+        "zipCode": "90062",
+        "locationVerified": true,
+        "latitude": 34.0032,
+        "longitude": -118.3073,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Zippopotam.us US ZIP centroid"
+      }
+    ]
+  },
+  {
+    "number": 109,
+    "deputy": "Daniel Gomez Jr.",
+    "councils": [
+      {
+        "councilNumber": 1898,
+        "name": "Whittier",
+        "city": "Whittier",
+        "zipCode": "90604",
+        "locationVerified": true,
+        "latitude": 33.9299,
+        "longitude": -118.0121,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Zippopotam.us US ZIP centroid"
+      },
+      {
+        "councilNumber": 4523,
+        "name": "Coronation",
+        "city": "La Mirada",
+        "zipCode": "90638",
+        "locationVerified": true,
+        "latitude": 33.9067,
+        "longitude": -118.0101,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Zippopotam.us US ZIP centroid"
+      },
+      {
+        "councilNumber": 10623,
+        "name": "St. Linus",
+        "city": "Norwalk",
+        "zipCode": "90650",
+        "locationVerified": true,
+        "latitude": 33.9056,
+        "longitude": -118.0818,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Zippopotam.us US ZIP centroid"
+      },
+      {
+        "councilNumber": 18877,
+        "name": "Saint Bruno",
+        "city": "Whittier",
+        "zipCode": "90603",
+        "locationVerified": true,
+        "latitude": 33.9432,
+        "longitude": -117.9927,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Zippopotam.us US ZIP centroid"
+      }
+    ]
+  },
+  {
+    "number": 110,
+    "deputy": "Tom Bray",
+    "councils": [
+      {
+        "councilNumber": 10140,
+        "name": "Monsignor Daniel Kielty",
+        "city": "Lakewood",
+        "zipCode": "90714",
+        "locationVerified": true,
+        "latitude": 33.8512,
+        "longitude": -118.1339,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Zippopotam.us US ZIP centroid"
+      },
+      {
+        "councilNumber": 12542,
+        "name": "St. Lucy",
+        "city": "West Long Beach",
+        "zipCode": "90810",
+        "locationVerified": true,
+        "latitude": 33.8193,
+        "longitude": -118.2325,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Zippopotam.us US ZIP centroid"
+      },
+      {
+        "councilNumber": 15874,
+        "name": "St. Pius X",
+        "city": "Santa Fe Springs",
+        "zipCode": "90670",
+        "locationVerified": true,
+        "latitude": 33.9464,
+        "longitude": -118.0838,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Zippopotam.us US ZIP centroid"
+      }
+    ]
+  },
+  {
+    "number": 111,
+    "deputy": "William Upshaw",
+    "councils": [
+      {
+        "councilNumber": 3449,
+        "name": "Judge Walter Desmond",
+        "city": "Long Beach",
+        "zipCode": "90807",
+        "locationVerified": true,
+        "latitude": 33.8315,
+        "longitude": -118.1811,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Zippopotam.us US ZIP centroid"
+      },
+      {
+        "councilNumber": 15736,
+        "name": "St. Cyprian",
+        "city": "Lakewood",
+        "zipCode": "90715",
+        "locationVerified": true,
+        "latitude": 33.8405,
+        "longitude": -118.0767,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Zippopotam.us US ZIP centroid"
+      },
+      {
+        "councilNumber": 1740,
+        "name": "Angels Gate",
+        "city": "San Pedro",
+        "zipCode": "90731",
+        "locationVerified": true,
+        "latitude": 33.7339,
+        "longitude": -118.2914,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Zippopotam.us US ZIP centroid"
+      }
+    ]
+  },
+  {
+    "number": 112,
+    "deputy": "Walter Gonzales",
+    "councils": [
+      {
+        "councilNumber": 2568,
+        "name": "Deacon Joe T. Battle",
+        "city": "Compton",
+        "zipCode": "90262",
+        "locationVerified": false
+      },
+      {
+        "councilNumber": 7116,
+        "name": "Father Callahan",
+        "city": "Carson",
+        "zipCode": "90745",
+        "locationVerified": true,
+        "latitude": 33.823,
+        "longitude": -118.2684,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Zippopotam.us US ZIP centroid"
+      }
+    ]
+  },
+  {
+    "number": 113,
+    "deputy": "Jaime Abrego",
+    "councils": [
+      {
+        "councilNumber": 621,
+        "name": "Los Angeles",
+        "city": "Los Angeles",
+        "zipCode": "90211",
+        "locationVerified": false
+      },
+      {
+        "councilNumber": 4039,
+        "name": "Our Lady of the Rosary",
+        "city": "Paramount",
+        "zipCode": "90723",
+        "locationVerified": true,
+        "latitude": 33.8969,
+        "longitude": -118.1632,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Zippopotam.us US ZIP centroid"
+      }
+    ]
+  },
+  {
+    "number": 114,
+    "deputy": "Manuel Orozco",
+    "councils": [
+      {
+        "councilNumber": 3629,
+        "name": "Monsignor John Cawley",
+        "city": "Lakewood",
+        "zipCode": "90808",
+        "locationVerified": false
+      },
+      {
+        "councilNumber": 18011,
+        "name": "Holy Innocents",
+        "city": "Long Beach",
+        "zipCode": "90806",
+        "locationVerified": true,
+        "latitude": 33.8045,
+        "longitude": -118.1876,
+        "coordinatePrecision": "postal-area",
+        "coordinateSource": "Zippopotam.us US ZIP centroid"
+      },
+      {
+        "councilNumber": 18775,
+        "name": "St. Peter Chanel",
+        "city": "Hawaiian Gardens",
+        "zipCode": "90630",
+        "locationVerified": false
+      }
+    ]
+  }
+]

@@ -2,22 +2,33 @@ import fs from "node:fs";
 import path from "node:path";
 
 const root = process.cwd();
-const councils = JSON.parse(fs.readFileSync(path.join(root, "src/_data/councils.json"), "utf8"));
+const districtsData = JSON.parse(fs.readFileSync(path.join(root, "src/_data/districts.json"), "utf8"));
+const councils = districtsData.flatMap((district) => district.councils.map((council) => ({ ...council, district: district.number })));
 const numbers = councils.map((council) => council.councilNumber);
-const expectedDistricts = [94, 95, 96, 97, 98, 99];
+const expectedDistricts = Array.from({ length: 21 }, (_, index) => 94 + index);
 
-if (councils.length !== 24) throw new Error(`Expected 24 councils, found ${councils.length}`);
+if (districtsData.length !== 21) throw new Error(`Expected 21 districts, found ${districtsData.length}`);
+if (councils.length !== 74) throw new Error(`Expected 74 listed councils, found ${councils.length}`);
 if (new Set(numbers).size !== numbers.length) throw new Error("Council numbers must be unique");
+if (councils.filter((council) => council.locationVerified).length !== 64) throw new Error("Expected 64 verified approximate map locations");
+if (districtsData.some((district) => !district.deputy || !Array.isArray(district.councils))) throw new Error("Every district must include a deputy and council list");
 for (const council of councils) {
-  for (const field of ["district", "councilNumber", "name", "city", "address", "latitude", "longitude", "mapsUrl", "source"]) {
-    if (council[field] === undefined || council[field] === "") throw new Error(`Council ${council.councilNumber} is missing ${field}`);
+  for (const field of ["district", "councilNumber", "city", "locationVerified"]) if (council[field] === undefined || council[field] === "") throw new Error(`Council ${council.councilNumber} is missing ${field}`);
+  if (council.locationVerified && (!Number.isFinite(council.latitude) || !Number.isFinite(council.longitude))) throw new Error(`Council ${council.councilNumber} has an unverified map location`);
+}
+const districts = [...new Set(councils.map((council) => council.district))].sort((a, b) => a - b);
+if (JSON.stringify(districts) !== JSON.stringify(expectedDistricts)) throw new Error(`Unexpected districts: ${districts.join(", ")}`);
+
+const publicFiles = ["src/_data/districts.json", "_site/councils/index.html"];
+for (const publicFile of publicFiles) {
+  const contents = fs.readFileSync(path.join(root, publicFile), "utf8");
+  for (const forbidden of ["membershipNumber", "phoneNumber", "emailAddress", "District 173"]) {
+    if (contents.includes(forbidden)) throw new Error(`${publicFile} contains forbidden public data: ${forbidden}`);
   }
 }
-const districts = [...new Set(councils.map((council) => council.district))].sort();
-if (JSON.stringify(districts) !== JSON.stringify(expectedDistricts)) throw new Error(`Unexpected districts: ${districts.join(", ")}`);
 
 for (const required of ["index.html", "about/index.html", "leadership/index.html", "councils/index.html", "programs/index.html", "events/index.html", "announcements/index.html", "gallery/index.html", "resources/index.html", "join/index.html", "contact/index.html", "privacy/index.html", "404.html", "sitemap.xml", "robots.txt", "CNAME"]) {
   if (!fs.existsSync(path.join(root, "_site", required))) throw new Error(`Missing build output: ${required}`);
 }
 
-console.log("Validated 24 unique councils, Districts 94–99, and all required build outputs.");
+console.log("Validated 21 districts, 74 unique listed councils, privacy rules, and all required build outputs.");

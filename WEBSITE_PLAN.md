@@ -1,5 +1,7 @@
 # SoCal Knights Website Plan
 
+> **September 2026 roster update:** The approved public scope is Districts 94–114: 21 districts serving 81 subordinate councils. The directory initially publishes 74 documented assignments and identifies the remaining seven as forthcoming. District 173 is excluded. District Deputy names may be published, but personal contact details, residential addresses, membership numbers, and spouse names remain private.
+
 ## Purpose of this document
 
 This document proposes the content, page structure, visual direction, and delivery plan for `socalknights.org`, the website of the Knights of Columbus Southern California Chapter. It is based on the supplied Word document, the supplied images, and a review of the local `stgenknights` project.
@@ -48,44 +50,17 @@ This distinction is defined in Section 242 of the Knights of Columbus Charter, C
 
 ### Recommended chapter description
 
-Use the following as provisional website copy pending leadership approval:
+Use the following approved website copy:
 
-> The Knights of Columbus Southern California Chapter brings together member councils in Districts 94 through 99 of the California State Council. The Chapter supports cooperation among councils, strengthens the mission and objectives of the Knights of Columbus in the local area, and advances Catholic faith, fraternity, charitable service, and community programs.
+> The Southern California Chapter serves 21 districts and 81 subordinate councils in the Greater Los Angeles areas covered by the Archdiocese of Los Angeles. Its primary objective is to promote the well-being of the Order in the area where the Chapter was organized. Chapter activities shall not compete with activities sponsored by the California State Council or subordinate councils.
 
 Saying only that the Chapter is “part of the California Knights of Columbus” is accurate but does not tell visitors what the Chapter does. The description above adds the Chapter's purpose using the official definition while remaining concise.
 
 ### Councils currently assigned to the Chapter
 
-The California State Council's **District Structure 2026–2027**, updated August 11, 2026, assigns Districts 94 through 99 and the following 24 councils to the Southern California Chapter:
+The approved public scope for Columbian Year 2026–2027 is Districts 94–114: 21 districts serving 81 subordinate councils. The supplied appointment workbook currently documents 74 assignments. Publish those 74 and clearly state that seven additional assignments will be added when confirmed. Do not publish District 173.
 
-| District | Council | Location |
-| --- | ---: | --- |
-| 94 | 3601 | Canoga Park |
-| 94 | 4956 | Sherman Oaks |
-| 94 | 17376 | Woodland Hills |
-| 94 | 17951 | Encino |
-| 95 | 2382 | Van Nuys |
-| 95 | 3148 | Van Nuys |
-| 95 | 14772 | Panorama City |
-| 95 | 16687 | North Hollywood |
-| 95 | 17933 | Lake Balboa |
-| 96 | 5007 | North Hills |
-| 96 | 16584 | Reseda |
-| 96 | 18774 | Reseda Spanish |
-| 97 | 1920 | Glendale |
-| 97 | 3254 | Montrose |
-| 97 | 3472 | Burbank |
-| 97 | 4438 | Sunland |
-| 97 | 17904 | Glendale |
-| 98 | 2406 | Los Angeles |
-| 98 | 11939 | Los Angeles |
-| 98 | 13555 | Los Angeles |
-| 98 | 14783 | Los Angeles |
-| 99 | 7759 | Los Angeles |
-| 99 | 13237 | Los Angeles |
-| 99 | 16120 | Los Angeles |
-
-This official district roster is a better source than searching every Southern California ZIP code. The council finder returns nearby councils geographically, including councils belonging to other chapters, while the state roster explicitly identifies Chapter membership. The roster should be checked at the start of each Columbian year before the website is updated.
+The complete staged lineup and reconciliation notes are maintained in `DISTRICT_LINEUP_REVIEW.md`. Council names, cities, ZIP codes, and status should be checked against the official Knights of Columbus council finder before publication. A council without a confirmed coordinate remains in the accessible directory without a map marker.
 
 Source references:
 
@@ -96,9 +71,7 @@ Source references:
 
 ### Status of the supplied leadership roster
 
-The Word document supplies names for all Chapter Officer positions and most director and chairman positions. It does not explicitly label the roster with a Columbian year. The Saint Augustine graphic embedded in the document says **2026–2027**, and the names overlap with the current 2026–2027 California district roster, but this is not enough to prove that every supplied Chapter officer assignment is for that year.
-
-For the MVP, the roster can be entered into structured data with a visible label of **Year pending confirmation** in the editing notes. The public page should not claim **2026–2027** until Chapter leadership confirms it.
+The supplied leadership roster is confirmed for **Columbian Year 2026–2027**. Public officer titles use the “Chapter” prefix, such as Chapter President and Chapter Secretary. Blank assignments remain hidden.
 
 ## Recommended site map
 
@@ -391,14 +364,15 @@ The supplied chapter logo is wide and works well in a desktop header. A simplifi
 
 | Item | Status | Current decision or source |
 | --- | --- | --- |
-| Official name | Supported by official records | Knights of Columbus Southern California Chapter; leadership approval requested |
-| Chapter description | Provisional copy prepared | Needs leadership approval |
-| Area and councils served | Confirmed for 2026–2027 | Districts 94–99 and 24 councils in the current California State Council roster |
-| Leadership roster | Supplied | Names and titles are in the Word document; roster year still needs confirmation |
+| Official name | Confirmed | Knights of Columbus Southern California Chapter |
+| Chapter description | Confirmed | Approved Greater Los Angeles objective and non-competition language |
+| Area and councils served | Staged for 2026–2027 | Districts 94–114; 21 districts, 81 served, 74 currently listed |
+| Leadership roster | Confirmed | Columbian Year 2026–2027; officer titles use the Chapter prefix |
 | Directors and chairmen | Supplied with gaps | Named assignments are in the Word document; blank positions need a Vacant-or-hide decision |
-| General email | Not available | The MVP can link to the Contact page without displaying an email until a contact method is chosen |
-| Mailing or meeting address | Not supplied | Optional for the MVP unless meetings are advertised |
-| Meeting schedule | Not supplied | Optional for the MVP unless meetings are public |
+| General email | Not available | State that no general Chapter email is maintained; do not publish personal emails |
+| Mailing address | Confirmed | 7359 Irvine Ave., North Hollywood, CA 91695 |
+| Meeting schedule | Confirmed | Business meeting: second Friday at 7:00 p.m.; Executive Officers planning: prior Monday on Zoom |
+| Meeting venue | Pending | Do not publish the tentative venue until confirmed |
 | Upcoming events | Not supplied | Use an honest empty state until an event is provided |
 | Forms | Not supplied | Link to official state and Supreme forms initially, or hide Chapter Forms until files are supplied |
 | Social media | Not supplied | Omit icons and links until official accounts are confirmed |
@@ -506,7 +480,7 @@ Recommended implementation:
 
 The site will be hosted with GitHub Pages and deployed from the `main` branch by GitHub Actions. The public Route 53 hosted zone `Z00427231ZMT7IMUWP8DL` will provide DNS for `socalknights.org`; DNS should not be changed until the production build and preview are approved.
 
-The Councils page will use Leaflet with OpenStreetMap tiles and a local JSON dataset. It will show one approximate marker per council, allow filtering by Districts 94 through 99, and provide Google Maps navigation links. No database or Google Maps API key is required.
+The Councils page uses Leaflet with OpenStreetMap tiles and a local JSON dataset grouped by Districts 94–114. A compact selector filters expandable district sections, council cards, and verified markers together. Every listed council receives a Google Maps search link; councils without confirmed coordinates remain in the directory without a marker. No database or Google Maps API key is required.
 
 ## Accessibility privacy and maintenance
 

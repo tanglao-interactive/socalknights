@@ -1,10 +1,13 @@
 (() => {
   const mapElement = document.querySelector('#council-map');
-  const cards = [...document.querySelectorAll('[data-council-card]')];
-  const filters = [...document.querySelectorAll('[data-district-filter]')];
+  const districtSelect = document.querySelector('[data-district-select]');
+  const groups = [...document.querySelectorAll('[data-district-group]')];
+  const status = document.querySelector('#map-status');
   if (!mapElement || !window.L) return;
 
-  const councils = JSON.parse(document.querySelector('#council-data').textContent);
+  const districts = JSON.parse(document.querySelector('#district-data').textContent);
+  const councils = districts.flatMap((district) => district.councils.map((council) => ({ ...council, district: district.number })));
+  const mappedCouncils = councils.filter((council) => council.locationVerified && Number.isFinite(council.latitude) && Number.isFinite(council.longitude));
   const map = L.map(mapElement, { scrollWheelZoom: false }).setView([34.16, -118.36], 10);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 18,
@@ -12,9 +15,10 @@
   }).addTo(map);
 
   const icon = L.divIcon({ className: 'council-marker', html: '<span aria-hidden="true"></span>', iconSize: [24, 24], iconAnchor: [12, 12] });
-  const markers = councils.map((council) => {
+  const mapsUrl = (council) => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`Knights of Columbus Council ${council.councilNumber} ${council.city} CA`)}`;
+  const markers = mappedCouncils.map((council) => {
     const marker = L.marker([council.latitude, council.longitude], { icon, title: `Council ${council.councilNumber}: ${council.name}` });
-    marker.bindPopup(`<strong>Council ${council.councilNumber}</strong><br>${council.name}<br>District ${council.district} · ${council.city}<br><a href="${council.mapsUrl}" target="_blank" rel="noopener">Open in Google Maps</a>`);
+    marker.bindPopup(`<strong>Council ${council.councilNumber}</strong><br>${council.name}<br>District ${council.district} · ${council.city}<br><a href="${mapsUrl(council)}" target="_blank" rel="noopener">Open in Google Maps</a>`);
     marker.addTo(map);
     return { council, marker };
   });
@@ -26,14 +30,25 @@
       if (!show && map.hasLayer(marker)) map.removeLayer(marker);
       return show;
     });
-    cards.forEach((card) => { card.hidden = district !== 'all' && card.dataset.district !== district; });
-    filters.forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.districtFilter === district)));
+    groups.forEach((group) => {
+      const show = district === 'all' || group.dataset.district === district;
+      group.hidden = !show;
+      if (district !== 'all') group.open = show;
+    });
+    if (districtSelect) districtSelect.value = district;
+    const listedCount = district === 'all'
+      ? councils.length
+      : councils.filter((council) => String(council.district) === district).length;
+    if (status) status.textContent = `${visible.length} mapped locations shown for ${listedCount} listed ${listedCount === 1 ? 'council' : 'councils'}.`;
     if (visible.length) {
       const bounds = L.latLngBounds(visible.map(({ council }) => [council.latitude, council.longitude]));
       map.fitBounds(bounds.pad(.15), { maxZoom: 12 });
     }
   };
 
-  filters.forEach((button) => button.addEventListener('click', () => applyFilter(button.dataset.districtFilter)));
+  districtSelect?.addEventListener('change', () => applyFilter(districtSelect.value));
+  groups.forEach((group) => group.addEventListener('toggle', () => {
+    if (group.open && !group.hidden && districtSelect?.value === 'all') applyFilter(group.dataset.district);
+  }));
   applyFilter('all');
 })();

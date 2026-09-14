@@ -8,6 +8,10 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("eventDate", (value) =>
     new Intl.DateTimeFormat("en-US", { dateStyle: "long", timeZone: "America/Los_Angeles" }).format(new Date(`${value}T12:00:00`))
   );
+  eleventyConfig.addFilter("mapsUrl", (council) => {
+    const query = `Knights of Columbus Council ${council.councilNumber} ${council.city || "Los Angeles"} CA`;
+    return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
+  });
 
   eleventyConfig.addCollection("upcomingEvents", (collectionApi) => {
     const today = new Date();

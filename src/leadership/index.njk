@@ -2,9 +2,9 @@
 layout: layouts/page.njk
 title: Chapter Leadership
 eyebrow: Leadership
-intro: Officers, directors, and chairmen serving the Southern California Chapter.
+intro: Chapter officers, directors, and chairmen serving during Columbian Year 2026–2027.
 permalink: /leadership/
 ---
-<section><p class="eyebrow">Chapter officers</p><h2>Officers</h2><dl class="directory">{% for person in leadership.officers %}<div class="person"><dt>{{ person.role }}</dt><dd>{{ person.name }}</dd></div>{% endfor %}</dl></section>
+<section><p class="eyebrow">Columbian Year 2026–2027</p><h2>Chapter Officers</h2><dl class="directory">{% for person in leadership.officers %}<div class="person"><dt>{{ person.role }}</dt><dd>{{ person.name }}</dd></div>{% endfor %}</dl></section>
 {% for group in leadership.groups %}<section class="leadership-group" id="{{ group.name | slugify }}"><p class="eyebrow">Directors and chairmen</p><h2>{{ group.name }}</h2><dl class="directory">{% for person in group.members %}<div class="person"><dt>{{ person.role }}</dt><dd>{{ person.name }}</dd></div>{% endfor %}</dl></section>{% endfor %}
 <section><div class="empty-state"><h2>Past Chapter Presidents</h2><p>The Chapter’s historical roster is being prepared for publication.</p></div></section>

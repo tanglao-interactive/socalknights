@@ -1,15 +1,15 @@
 ---
 layout: layouts/page.njk
 title: Councils and Districts
-eyebrow: Districts 94–99
-intro: Explore the 24 councils currently assigned to the Southern California Chapter.
+eyebrow: Districts 94–114
+intro: Explore 74 confirmed council assignments across the Chapter’s 21 districts.
 permalink: /councils/
 councilMap: true
 ---
-<p>Use the district filters to focus the map and directory. Map markers show the approximate city or ZIP location published by the official council finder, not a verified meeting address.</p>
-<div class="filter-bar" role="group" aria-label="Filter councils by district"><button class="filter" data-district-filter="all" aria-pressed="true">All districts</button>{% for district in [94,95,96,97,98,99] %}<button class="filter" data-district-filter="{{ district }}" aria-pressed="false">District {{ district }}</button>{% endfor %}</div>
+<div class="roster-notice"><strong>The Chapter serves 81 councils.</strong> This directory currently lists 74 confirmed assignments; additional councils will be added as information is confirmed.</div>
+<div class="district-controls"><label for="district-filter">Choose a district</label><select id="district-filter" data-district-select><option value="all">All districts</option>{% for district in districts %}<option value="{{ district.number }}">District {{ district.number }}</option>{% endfor %}</select></div>
 <div class="map-layout">
-  <div class="map-wrap"><div id="council-map" class="map" aria-label="Approximate map of Southern California Chapter councils"></div><p class="map-note">Map data © OpenStreetMap contributors. Council names, cities, and ZIP codes were checked against the official Knights of Columbus council finder.</p></div>
-  <div class="council-list" aria-live="polite">{% for council in councils %}<article class="council-card" data-council-card data-district="{{ council.district }}"><p>District {{ council.district }}</p><h2>Council {{ council.councilNumber }}</h2><strong>{{ council.name }}</strong><p>{{ council.city }}, California</p><a href="{{ council.mapsUrl }}" target="_blank" rel="noopener">Navigate with Google Maps →</a></article>{% endfor %}</div>
+  <div class="map-wrap"><div id="council-map" class="map" aria-label="Map of currently verified Southern California Chapter council locations"></div><p id="map-status" class="map-status" aria-live="polite"></p><p class="map-note">Map data © OpenStreetMap contributors. Markers show approximate city or ZIP locations, not verified meeting addresses. Councils without confirmed coordinates remain available in the directory.</p></div>
+  <div class="district-list" aria-live="polite">{% for district in districts %}<details class="district-group" data-district-group data-district="{{ district.number }}"><summary><span><strong>District {{ district.number }}</strong><small>{{ district.councils | length }} listed councils</small></span><span class="district-deputy"><small>District Deputy</small>{{ district.deputy }}</span></summary><div class="district-councils">{% for council in district.councils %}<article class="council-card" data-council-card data-district="{{ district.number }}"><p>Council {{ council.councilNumber }}</p><h2>{{ council.name or "Council name forthcoming" }}</h2><p>{{ council.city }}{% if council.zipCode %}, CA {{ council.zipCode }}{% else %}, California{% endif %}</p>{% if council.officialRecordVerified == false %}<p class="verification-note">Official council record pending verification.</p>{% endif %}<a href="{{ council | mapsUrl }}" target="_blank" rel="noopener">Navigate with Google Maps →</a></article>{% endfor %}</div></details>{% endfor %}</div>
 </div>
-<script id="council-data" type="application/json">{{ councils | dump | safe }}</script>
+<script id="district-data" type="application/json">{{ districts | dump | safe }}</script>
