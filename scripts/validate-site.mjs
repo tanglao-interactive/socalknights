@@ -31,4 +31,10 @@ for (const required of ["index.html", "about/index.html", "leadership/index.html
   if (!fs.existsSync(path.join(root, "_site", required))) throw new Error(`Missing build output: ${required}`);
 }
 
+const eventPage = fs.readFileSync(path.join(root, "_site/events/district-deputy-mid-term-meeting-2027/index.html"), "utf8");
+for (const requiredEventText of ["District Deputy Mid-Term Meeting", "January 8–10, 2027", "Visalia Convention Center", "Visalia, California"]) {
+  if (!eventPage.includes(requiredEventText)) throw new Error(`Event page is missing: ${requiredEventText}`);
+}
+if (!fs.existsSync(path.join(root, "_site/assets/img/events/district-deputy-mid-term-meeting-2027.webp"))) throw new Error("Event flyer was not copied to the build");
+
 console.log("Validated 21 districts, 74 unique listed councils, privacy rules, and all required build outputs.");
