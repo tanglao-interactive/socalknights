@@ -8,7 +8,10 @@
   const districts = JSON.parse(document.querySelector('#district-data').textContent);
   const councils = districts.flatMap((district) => district.councils.map((council) => ({ ...council, district: district.number })));
   const mappedCouncils = councils.filter((council) => council.locationVerified && Number.isFinite(council.latitude) && Number.isFinite(council.longitude));
-  const map = L.map(mapElement, { scrollWheelZoom: false }).setView([34.16, -118.36], 10);
+  // The map is supplementary to the complete semantic directory. Keeping the
+  // map canvas and dozens of duplicate markers out of the tab order prevents a
+  // long keyboard detour while the ordinary directory links remain available.
+  const map = L.map(mapElement, { keyboard: false, scrollWheelZoom: false }).setView([34.16, -118.36], 10);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 18,
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
@@ -17,7 +20,7 @@
   const icon = L.divIcon({ className: 'council-marker', html: '<span aria-hidden="true"></span>', iconSize: [24, 24], iconAnchor: [12, 12] });
   const mapsUrl = (council) => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`Knights of Columbus Council ${council.councilNumber} ${council.city} CA`)}`;
   const markers = mappedCouncils.map((council) => {
-    const marker = L.marker([council.latitude, council.longitude], { icon, title: `Council ${council.councilNumber}: ${council.name}` });
+    const marker = L.marker([council.latitude, council.longitude], { icon, keyboard: false, title: `Council ${council.councilNumber}: ${council.name}` });
     marker.bindPopup(`<strong>Council ${council.councilNumber}</strong><br>${council.name}<br>District ${council.district} · ${council.city}<br><a href="${mapsUrl(council)}" target="_blank" rel="noopener">Open in Google Maps</a>`);
     marker.addTo(map);
     return { council, marker };

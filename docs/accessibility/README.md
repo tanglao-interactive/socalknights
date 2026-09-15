@@ -8,4 +8,4 @@ This folder records Tanglao, Corp's evaluation of the Southern California Chapte
 - [Conformance report](conformance-report.md)
 - [Independent review brief](independent-review-brief.md)
 
-Automated results are reproducible with `npm run test:all`. Raw Playwright traces and reports are generated artifacts and are not part of the conformance claim.
+Automated results are reproducible locally with `npm run test:all`. Set `A11Y_BASE_URL=https://socalknights.org` when running `npm run test:a11y` to exercise the same suite against production. Raw Playwright traces and reports are generated artifacts and are not part of the conformance claim.

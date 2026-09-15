@@ -39,7 +39,7 @@
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
       <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
         {% for item in site.navigation %}<a href="{{ item.url }}"{% if page.url.startsWith(item.url) %} aria-current="page"{% endif %}>{{ item.label }}</a>{% endfor %}
-        <a class="nav-join" href="/join/">Join Us</a>
+        <a class="nav-join" href="/join/"{% if page.url.startsWith('/join/') %} aria-current="page"{% endif %}>Join Us</a>
       </nav>
     </div>
   </header>
