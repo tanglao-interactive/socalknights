@@ -36,7 +36,7 @@
       <a class="brand" href="/" aria-label="Southern California Chapter home">
         <img src="/assets/img/chapter-logo.png" alt="Knights of Columbus Southern California Chapter">
       </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span><span class="sr-only">Menu</span></button>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
       <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
         {% for item in site.navigation %}<a href="{{ item.url }}"{% if page.url.startsWith(item.url) %} aria-current="page"{% endif %}>{{ item.label }}</a>{% endfor %}
         <a class="nav-join" href="/join/">Join Us</a>

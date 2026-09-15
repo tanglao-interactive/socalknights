@@ -39,7 +39,8 @@
     const listedCount = district === 'all'
       ? councils.length
       : councils.filter((council) => String(council.district) === district).length;
-    if (status) status.textContent = `${visible.length} mapped locations shown for ${listedCount} listed ${listedCount === 1 ? 'council' : 'councils'}.`;
+    const districtLabel = district === 'all' ? 'all districts' : `District ${district}`;
+    if (status) status.textContent = `${visible.length} mapped locations shown for ${listedCount} listed ${listedCount === 1 ? 'council' : 'councils'} in ${districtLabel}.`;
     if (visible.length) {
       const bounds = L.latLngBounds(visible.map(({ council }) => [council.latitude, council.longitude]));
       map.fitBounds(bounds.pad(.15), { maxZoom: 12 });
