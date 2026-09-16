@@ -21,7 +21,7 @@ Tanglao, Corp is evaluating the Southern California Chapter website against WCAG
 | Client authorization of project/reference description | Pending |
 | Independent NVDA/Chrome sample review | Optional; not commissioned |
 
-The expanded local suite completed 91 of 91 Playwright tests on September 15, 2026. The production run completed 89 checks before the known mobile-trigger overlap caused the interaction test to time out; the current-page test also failed on the undeployed Join Us remediation. Automated results cover only issues that axe-core and scripted interactions can detect; they do not replace the pending manual and assistive-technology checks.
+The expanded local suite completed 92 of 92 Playwright tests on September 15, 2026, including a project-specific check that promotional program cards do not create misleading article landmarks. The prior production run completed 89 checks before the known mobile-trigger overlap caused the interaction test to time out; the current-page test also failed on the undeployed Join Us remediation. Production must be rerun after deploying all remediations. Automated results cover only issues that axe-core and scripted interactions can detect; they do not replace the pending manual and assistive-technology checks.
 
 ## Remaining limitations
 

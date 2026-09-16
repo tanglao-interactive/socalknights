@@ -201,6 +201,13 @@ test("every route has expected structure, alternatives, and a unique title", asy
   expect(new Set(titles).size, "page titles must be unique").toBe(routes.length);
 });
 
+test("promotional program cards do not create misleading article landmarks", async ({ page }) => {
+  await gotoRoute(page, "/");
+  const programSection = page.locator("section", { has: page.getByRole("heading", { name: "Our program areas" }) });
+  await expect(programSection.locator("article.card")).toHaveCount(0);
+  await expect(programSection.locator(".card")).toHaveCount(4);
+});
+
 test("navigation identifies the current first-party section", async ({ page }) => {
   for (const route of ["/about/", "/leadership/", "/councils/", "/programs/", "/events/", "/events/district-deputy-mid-term-meeting-2027/", "/announcements/", "/resources/", "/join/"]) {
     await gotoRoute(page, route);
