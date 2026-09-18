@@ -37,6 +37,11 @@ for (const requiredEventText of ["District Deputy Mid-Term Meeting", "January 8â
 }
 if (!fs.existsSync(path.join(root, "_site/assets/img/events/district-deputy-mid-term-meeting-2027.webp"))) throw new Error("Event flyer was not copied to the build");
 
+const errorPage = fs.readFileSync(path.join(root, "_site/404.html"), "utf8");
+for (const requiredErrorText of ["<title>Page Not Found | Southern California Knights</title>", "<h1 id=\"page-title\">Page not found</h1>", "The requested page could not be found.", "Return to the homepage"]) {
+  if (!errorPage.includes(requiredErrorText)) throw new Error(`404 page is missing: ${requiredErrorText}`);
+}
+
 const homePage = fs.readFileSync(path.join(root, "_site/index.html"), "utf8");
 for (const analyticsText of ["https://www.googletagmanager.com/gtag/js?id=G-LW06KZ4RMM", "gtag('config', 'G-LW06KZ4RMM')"]) {
   if (!homePage.includes(analyticsText)) throw new Error(`Google Analytics integration is missing: ${analyticsText}`);

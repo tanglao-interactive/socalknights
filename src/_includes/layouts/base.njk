@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if title %}{{ title }} | {% endif %}{{ site.shortName }}</title>
+  <title>{{ documentTitle or ((title + " | " + site.shortName) if title else site.shortName) }}</title>
   <meta name="description" content="{{ description or site.description }}">
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
-  <meta property="og:title" content="{% if title %}{{ title }} | {% endif %}{{ site.shortName }}">
+  <meta property="og:title" content="{{ documentTitle or ((title + " | " + site.shortName) if title else site.shortName) }}">
   <meta property="og:description" content="{{ description or site.description }}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
@@ -43,7 +43,7 @@
       </nav>
     </div>
   </header>
-  <main id="main" tabindex="-1">{{ content | safe }}</main>
+  <main id="main" tabindex="-1"{% if mainLabelledBy %} aria-labelledby="{{ mainLabelledBy }}"{% endif %}>{{ content | safe }}</main>
   <footer class="site-footer">
     <div class="shell footer-grid">
       <div><a class="footer-brand" href="/" aria-label="Southern California Chapter home"><img class="footer-mark" src="/assets/img/chapter-logo.png" alt=""></a><p>Faith in action across Southern California.</p></div>

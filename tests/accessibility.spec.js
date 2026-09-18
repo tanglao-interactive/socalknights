@@ -1,7 +1,8 @@
 import { test, expect } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 
-const routes = ["/", "/about/", "/leadership/", "/councils/", "/programs/", "/events/", "/events/district-deputy-mid-term-meeting-2027/", "/announcements/", "/gallery/", "/resources/", "/join/", "/contact/", "/privacy/", "/404.html"];
+const errorRoute = "/accessibility-test-404";
+const routes = ["/", "/about/", "/leadership/", "/councils/", "/programs/", "/events/", "/events/district-deputy-mid-term-meeting-2027/", "/announcements/", "/gallery/", "/resources/", "/join/", "/contact/", "/privacy/", errorRoute];
 const viewports = { desktop: { width: 1440, height: 900 }, mobile: { width: 390, height: 844 }, reflow: { width: 320, height: 800 } };
 // Council disclosure controls have a dedicated keyboard-operability test below.
 // Leaflet's injected controls belong to the documented third-party integration.
@@ -216,7 +217,34 @@ test("navigation identifies the current first-party section", async ({ page }) =
 });
 
 test("404 identifies the error and provides a recovery path", async ({ page }) => {
-  await gotoRoute(page, "/404.html");
-  await expect(page.locator("h1")).toContainText(/not found/i);
-  await expect(page.getByRole("link", { name: /home/i }).first()).toBeVisible();
+  const response = await page.goto(errorRoute, { waitUntil: "domcontentloaded" });
+  expect(response?.status()).toBe(404);
+  await expect(page).toHaveTitle("Page Not Found | Southern California Knights");
+  await expect(page.getByRole("heading", { level: 1, name: "Page not found", exact: true })).toHaveCount(1);
+  await expect(page.getByRole("main", { name: "Page not found" })).toBeVisible();
+  await expect(page.getByText("The requested page could not be found.", { exact: true })).toBeVisible();
+  const returnLink = page.getByRole("link", { name: "Return to the homepage", exact: true });
+  await expect(returnLink).toBeVisible();
+  const initialFocusWasMovedToError = await page.evaluate(() => [document.querySelector("main"), document.querySelector("h1")].includes(document.activeElement));
+  expect(initialFocusWasMovedToError, "initial server-rendered load must not move focus unexpectedly").toBe(false);
+  await page.keyboard.press("Tab");
+  await expect(page.getByRole("link", { name: "Skip to content" })).toBeFocused();
+  await page.keyboard.press("Enter");
+  const main = page.getByRole("main", { name: "Page not found" });
+  await expect(main).toBeFocused();
+  await expect(main).toHaveCSS("outline-style", "solid");
+  await returnLink.click();
+  await expect(page).toHaveURL(/\/$/);
+  await expect(page.getByRole("heading", { level: 1, name: "Faith and service across Southern California." })).toBeVisible();
+});
+
+test("404 remains identifiable in forced-colors mode", async ({ page }) => {
+  await page.emulateMedia({ forcedColors: "active", reducedMotion: "reduce" });
+  await gotoRoute(page, errorRoute);
+  const returnLink = page.getByRole("link", { name: "Return to the homepage" });
+  await returnLink.focus();
+  await expect(returnLink).toBeFocused();
+  const outline = await returnLink.evaluate((element) => getComputedStyle(element).outlineStyle);
+  expect(outline).not.toBe("none");
+  await expectNoWcag21Violations(page, "forced-colors 404 page");
 });
