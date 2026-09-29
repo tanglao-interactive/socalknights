@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 
 const errorRoute = "/accessibility-test-404";
-const routes = ["/", "/about/", "/leadership/", "/councils/", "/programs/", "/events/", "/events/district-deputy-mid-term-meeting-2027/", "/announcements/", "/gallery/", "/resources/", "/join/", "/contact/", "/privacy/", errorRoute];
+const routes = ["/", "/about/", "/leadership/", "/councils/", "/programs/", "/events/", "/events/district-deputy-mid-term-meeting-2027/", "/announcements/", "/announcements/2026-09-28-a-sacred-and-historic-day-for-our-parish-family/", "/gallery/", "/resources/", "/join/", "/contact/", "/privacy/", errorRoute];
 const viewports = { desktop: { width: 1440, height: 900 }, mobile: { width: 390, height: 844 }, reflow: { width: 320, height: 800 } };
 // Council disclosure controls have a dedicated keyboard-operability test below.
 // Leaflet's injected controls belong to the documented third-party integration.
