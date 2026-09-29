@@ -1,5 +1,6 @@
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
+  eleventyConfig.addPassthroughCopy("src/announcements/**/*.jpeg");
   eleventyConfig.addPassthroughCopy({ "node_modules/leaflet/dist": "assets/vendor/leaflet" });
   eleventyConfig.addPassthroughCopy({ "src/CNAME": "CNAME" });
   eleventyConfig.addPassthroughCopy({ "src/robots.txt": "robots.txt" });
@@ -28,6 +29,11 @@ export default function (eleventyConfig) {
       .filter((item) => new Date(`${item.data.date}T23:59:59`) < today)
       .sort((a, b) => b.data.date.localeCompare(a.data.date));
   });
+
+  eleventyConfig.addCollection("announcements", (collectionApi) =>
+    collectionApi.getFilteredByTag("announcement")
+      .sort((a, b) => b.data.date.localeCompare(a.data.date))
+  );
 
   return {
     dir: { input: "src", output: "_site", includes: "_includes", data: "_data" },
