@@ -6,4 +6,27 @@ intro: Timely notices, deadlines, and updates for councils and members.
 headerTheme: news
 permalink: /announcements/
 ---
-{% if collections.announcements.length %}<div class="announcement-list">{% for item in collections.announcements %}<article class="announcement-card">{% if item.data.image %}<a class="announcement-card-image" href="{{ item.url }}"><img src="{{ item.data.image }}" alt="{{ item.data.imageAlt }}" loading="lazy" width="{{ item.data.imageWidth }}" height="{{ item.data.imageHeight }}"></a>{% endif %}<div class="announcement-card-copy"><time datetime="{{ item.data.date }}">{{ item.data.dateDisplay }}</time><h2><a href="{{ item.url }}">{{ item.data.title }}</a></h2><p>{{ item.data.summary }}</p><a class="text-link" href="{{ item.url }}">Read the announcement <span aria-hidden="true">→</span></a></div></article>{% endfor %}</div>{% else %}<div class="empty-state"><h2>No announcements have been posted.</h2><p>Confirmed Chapter notices and updates will appear here.</p></div>{% endif %}
+<section class="announcements-section" aria-labelledby="current-announcements">
+  <h2 id="current-announcements">Current and upcoming</h2>
+  {% if collections.currentAnnouncements.length %}
+  <div class="announcement-list">
+    {% for item in collections.currentAnnouncements %}
+      {% include "components/announcement-card.njk" %}
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="empty-state"><p>No current or upcoming announcements have been posted.</p></div>
+  {% endif %}
+</section>
+<section class="announcements-section" aria-labelledby="archived-announcements">
+  <h2 id="archived-announcements">Archived</h2>
+  {% if collections.archivedAnnouncements.length %}
+  <div class="announcement-list">
+    {% for item in collections.archivedAnnouncements %}
+      {% include "components/announcement-card.njk" %}
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="empty-state"><p>No archived announcements.</p></div>
+  {% endif %}
+</section>

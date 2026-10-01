@@ -1,3 +1,5 @@
+import { partitionAnnouncements } from "./scripts/announcement-collections.mjs";
+
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   eleventyConfig.addPassthroughCopy("src/announcements/**/*.jpeg");
@@ -33,6 +35,12 @@ export default function (eleventyConfig) {
   eleventyConfig.addCollection("announcements", (collectionApi) =>
     collectionApi.getFilteredByTag("announcement")
       .sort((a, b) => b.data.date.localeCompare(a.data.date))
+  );
+  eleventyConfig.addCollection("currentAnnouncements", (collectionApi) =>
+    partitionAnnouncements(collectionApi.getFilteredByTag("announcement")).current
+  );
+  eleventyConfig.addCollection("archivedAnnouncements", (collectionApi) =>
+    partitionAnnouncements(collectionApi.getFilteredByTag("announcement")).archived
   );
 
   return {
